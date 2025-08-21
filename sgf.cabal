@@ -26,12 +26,12 @@ library
                         Data.SGF.Parse.Raw
                         Data.SGF.Parse.Util
     build-depends:  base >=3 && < 5,
-                    containers >= 0.6.7 && < 0.7,
-                    encoding >= 0.8.9 && < 0.9,
+                    containers >= 0.6.7 && < 0.9,
+                    encoding >= 0.8.9 && < 0.11,
                     extensible-exceptions >= 0.1.1 && < 0.2,
                     mtl >= 2.2.2,
                     transformers >= 0.5.6,
-                    time >= 1.12.2 && < 1.13,
+                    time >= 1.12.2 && < 1.16,
                     split >= 0.2.5,
                     parsec >= 3.1.16 && < 3.2
 
