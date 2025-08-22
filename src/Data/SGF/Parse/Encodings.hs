@@ -3,9 +3,9 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE InstanceSigs #-}
 
-module Data.SGF.Parse.Encodings
-    ( guessEncoding
-    , decodeWordStringExplicit
+module Data.SGF.Parse.Encodings (
+        module Data.SGF.Parse.Encodings,
+        encodingFromString
     ) where
 
 import Control.Applicative (Applicative(..))
@@ -27,7 +27,7 @@ instance Functor (MyEither a) where
 
 instance Applicative (MyEither a) where
     pure :: a2 -> MyEither a1 a2
-    pure x = return x -- note that an eta reduced version of this trips the type checker for non-canonical "pure = return"
+    pure x = MyEither (Right x)
     (<*>) :: MyEither a1 (a2 -> b) -> MyEither a1 a2 -> MyEither a1 b
     (<*>) = ap
 

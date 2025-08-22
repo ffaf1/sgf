@@ -48,6 +48,17 @@ library sgf-internal
                         parsec >= 3.1.16 && < 3.2
     hs-source-dirs:     src/
 
+test-suite test
+    import:             shared
+    main-is:            Test.hs
+    other-modules:      Unit.Data.SGF.Parse.EncodingsSpec
+    build-depends:      sgf-internal,
+                        hspec >= 2.11.8 && < 2.12,
+    build-tool-depends: hspec-discover:hspec-discover
+    hs-source-dirs:     test
+    type:               exitcode-stdio-1.0
+
+
 source-repository head
     type:       git
     location:   https://github.com/tonicebrian/sgf
