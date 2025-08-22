@@ -24,7 +24,8 @@ common shared
 
 library
     import:             shared
-    exposed-modules:    Data.SGF
+    exposed-modules:    Data.SGF,
+                        Data.SGF.Prim
     build-depends:      sgf-internal
     hs-source-dirs:     lib/
 
