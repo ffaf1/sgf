@@ -10,7 +10,8 @@ module Data.SGF (
     module Data.SGF.Parse,
     module Data.Word,
     module Data.Tree,
-    module Text.ParserCombinators.Parsec
+    module Text.ParserCombinators.Parsec,
+    module Data.ByteString
     -- * Overview of SGF
     -- $sgf
 
@@ -26,6 +27,8 @@ import Data.SGF.Parse (collection)
 import Data.Word
 import Data.Tree
 import Text.ParserCombinators.Parsec (runParser)
+
+import Data.ByteString (getContents, unpack, readFile)
 
 -- TODO:
 -- * support parsing from ByteString, then take the "unpack" out of "parse" below

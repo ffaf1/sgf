@@ -25,12 +25,14 @@ common shared
 library
     import:             shared
     exposed-modules:    Data.SGF
-                        Data.SGF.Parse
-                        Data.SGF.Types
-    other-modules:      Data.SGF.Parse.Encodings
-                        Data.SGF.Parse.Raw
-                        Data.SGF.Parse.Util
-    build-depends:  containers >= 0.6.7 && < 0.9,
+                        Data.SGF.Parse,
+                        Data.SGF.Types,
+    other-modules:      Data.SGF.Parse.Encodings,
+                        Data.SGF.Parse.Raw,
+                        Data.SGF.Parse.Util,
+                        Data.SGF.Reexports
+    build-depends:  bytestring >= 0.12.2 && < 0.13,
+                    containers >= 0.6.7 && < 0.9,
                     encoding >= 0.8.9 && < 0.11,
                     extensible-exceptions >= 0.1.1 && < 0.2,
                     mtl >= 2.2.2,
