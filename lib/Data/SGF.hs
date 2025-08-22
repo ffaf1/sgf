@@ -8,10 +8,6 @@ There are plans to support other games and pretty-printing in future releases.
 module Data.SGF (
     module Data.SGF.Types,
     module Data.SGF.Parse,
-    module Data.Word,
-    module Data.Tree,
-    module Text.ParserCombinators.Parsec,
-    module Data.ByteString
     -- * Overview of SGF
     -- $sgf
 
@@ -20,15 +16,14 @@ module Data.SGF (
 
     -- * Example usage
     -- $example
+
+    -- * Convenience reexports
+    module Data.SGF.Reexports
 ) where
 
 import Data.SGF.Types
 import Data.SGF.Parse (collection)
-import Data.Word
-import Data.Tree
-import Text.ParserCombinators.Parsec (runParser)
-
-import Data.ByteString (getContents, unpack, readFile)
+import Data.SGF.Reexports
 
 -- TODO:
 -- * support parsing from ByteString, then take the "unpack" out of "parse" below

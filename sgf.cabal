@@ -25,9 +25,15 @@ common shared
 library
     import:             shared
     exposed-modules:    Data.SGF
-                        Data.SGF.Parse,
+    build-depends:      sgf-internal
+    hs-source-dirs:     lib/
+
+library sgf-internal
+    import:             shared
+    visibility:         internal
+    exposed-modules:    Data.SGF.Parse,
                         Data.SGF.Types,
-    other-modules:      Data.SGF.Parse.Encodings,
+                        Data.SGF.Parse.Encodings,
                         Data.SGF.Parse.Raw,
                         Data.SGF.Parse.Util,
                         Data.SGF.Reexports
@@ -40,6 +46,7 @@ library
                     time >= 1.12.2 && < 1.16,
                     split >= 0.2.5,
                     parsec >= 3.1.16 && < 3.2
+    hs-source-dirs:     src/
 
 source-repository head
     type:       git
