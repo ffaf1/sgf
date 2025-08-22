@@ -41,10 +41,10 @@ library sgf-internal
                         containers >= 0.6.7 && < 0.9,
                         encoding >= 0.8.9 && < 0.11,
                         extensible-exceptions >= 0.1.1 && < 0.2,
-                        mtl >= 2.2.2,
-                        transformers >= 0.5.6,
+                        mtl >= 2.2.2 && < 2.4,
+                        transformers >= 0.5.6 && < 0.7,
                         time >= 1.12.2 && < 1.16,
-                        split >= 0.2.5,
+                        split >= 0.2.5 && < 0.3,
                         parsec >= 3.1.16 && < 3.2
     hs-source-dirs:     src/
 
