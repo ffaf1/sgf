@@ -77,7 +77,7 @@ test = runParser collection () "<interactive>" . map enum
 -- two kinds of errors in SGF files: recoverable ones (which will be
 -- accumulated in the ['Warning'] return) and unrecoverable ones (which will
 -- result in parse errors).
-collection :: Stream s m Word8 => ParsecT s u m (Collection, [Warning])
+collection :: SGFParser (Collection, [Warning])
 collection =
     second concat . unzip <$> (mapM (translate gameTree) =<< Raw.collection)
 

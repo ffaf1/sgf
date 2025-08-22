@@ -85,6 +85,7 @@ data GameType =
     Sahara | Byte | Focus | Dvonn | Tamsk | Gipf | Kropki
     deriving (Eq, Ord, Bounded, Show, Read)
 
+allGameTypesInSGFOrder :: [GameType]
 allGameTypesInSGFOrder =
     [Go, Othello, Chess, Gomoku, NineMen'sMorris, Backgammon,
      ChineseChess, Shogi, LinesOfAction, Ataxx, Hex, Jungle,
@@ -204,6 +205,7 @@ data Numbering
                     -- number that the first labeled move is below 100.
     deriving (Eq, Ord, Show, Read, Enum, Bounded)
 
+allGameInfoTypes :: [GameInfoType]
 allGameInfoTypes = [TeamName Black, TeamName White, PlayerName Black, PlayerName White, Annotator, Source, User, Copyright, Context, Location, Event, GameName, Opening, Overtime]
 instance Enum GameInfoType where
     toEnum = (allGameInfoTypes !!)
