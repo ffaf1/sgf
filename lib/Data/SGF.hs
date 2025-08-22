@@ -97,8 +97,6 @@ obscure the idea.)
 First, some boring stuff.
 
 > import Data.SGF
-> import Data.ByteString  (ByteString, getContents, unpack)
-> import Data.Tree
 > import Data.List hiding ((!!))
 > import Prelude   hiding ((!!), getContents)
 >

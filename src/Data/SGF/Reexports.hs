@@ -6,7 +6,7 @@ module Data.SGF.Reexports (
     ) where
 
 import Data.Word
-import Data.Tree
+import Data.Tree (Tree(..), levels)
 import Text.ParserCombinators.Parsec (runParser)
 
-import Data.ByteString (getContents, unpack, readFile)
+import Data.ByteString (ByteString, getContents, unpack, readFile)
