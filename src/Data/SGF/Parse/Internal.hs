@@ -8,7 +8,7 @@
 -- boilerplate {{{
 -- TODO: check that every occurrence of "die" should really be a death, and not just a "fix-it-up-and-warn"
 -- boilerplate {{{
-module Data.SGF.Parse
+module Data.SGF.Parse.Internal
     ( collection
     , clipDate
     , PropertyType(..)
@@ -40,15 +40,15 @@ import Data.SGF.Parse.Encodings
 import Data.SGF.Parse.Raw hiding (collection)
 import qualified Data.SGF.Parse.Raw as Raw
 import Data.SGF.Parse.Util
-import Data.SGF.Types (Game(Game), GameNode(GameNode))
-import Data.SGF.Types hiding
+import Data.SGF.Types.Internal (Game(Game), GameNode(GameNode))
+import Data.SGF.Types.Internal hiding
     ( Game(..)
     , GameInfo(..)
     , GameNode(..)
     , Move(..)
     , Setup(..)
     )
-import qualified Data.SGF.Types as T
+import qualified Data.SGF.Types.Internal as T
 import qualified Data.Set as Set
 import Data.Time.Calendar
 import Data.Tree

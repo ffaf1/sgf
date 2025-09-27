@@ -3,7 +3,7 @@
 -- | Types used to represent an SGF tree.  Whenever a data type is used by
 -- exactly one other data type, there will be a \"see also\" link to its
 -- containing type.
-module Data.SGF.Types (
+module Data.SGF.Types.Internal (
     -- * Game type
     Game(..), GameTree(..), GameNode(..),
     Move(..), Setup(..),

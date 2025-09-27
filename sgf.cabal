@@ -25,15 +25,16 @@ common shared
 library
     import:             shared
     exposed-modules:    Data.SGF,
-                        Data.SGF.Prim
+                        Data.SGF.Parse,
+                        Data.SGF.Types
     build-depends:      sgf-internal
     hs-source-dirs:     lib/
 
 library sgf-internal
     import:             shared
     visibility:         internal
-    exposed-modules:    Data.SGF.Parse,
-                        Data.SGF.Types,
+    exposed-modules:    Data.SGF.Parse.Internal,
+                        Data.SGF.Types.Internal,
                         Data.SGF.Parse.Encodings,
                         Data.SGF.Parse.Raw,
                         Data.SGF.Parse.Util,

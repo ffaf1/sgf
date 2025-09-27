@@ -6,7 +6,8 @@ robust to minor errors, especially those made by the most common SGF editors.
 There are plans to support other games and pretty-printing in future releases.
 -}
 module Data.SGF (
-    module Data.SGF.Prim,
+    module Data.SGF.Types,
+    collection,
     -- * Overview of SGF
     -- $sgf
 
@@ -20,7 +21,8 @@ module Data.SGF (
     module Data.SGF.Reexports
 ) where
 
-import Data.SGF.Prim
+import Data.SGF.Types
+import Data.SGF.Parse (collection)
 import Data.SGF.Reexports
 
 -- TODO:
