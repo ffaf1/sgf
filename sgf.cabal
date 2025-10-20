@@ -1,4 +1,4 @@
-cabal-version:      2.2
+cabal-version:      3.0
 name:               sgf
 version:            0.1.3.3
 author:             Daniel Wagner daniel@wagner-home.com
@@ -35,7 +35,7 @@ library
 
 library sgf-internal
     import:             shared
-    visibility:         internal
+    visibility:         private
     exposed-modules:    Data.SGF.Parse.Internal,
                         Data.SGF.Types.Internal,
                         Data.SGF.Parse.Encodings,
