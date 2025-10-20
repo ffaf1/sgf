@@ -18,12 +18,20 @@ module Data.SGF (
     -- $example
 
     -- * Convenience reexports
-    module Data.SGF.Reexports
+    Word8,
+    Tree(..), levels,
+    runParser,
+    B.ByteString, B.getContents, B.unpack, B.readFile
 ) where
 
 import Data.SGF.Types
 import Data.SGF.Parse (collection)
-import Data.SGF.Reexports
+
+import Data.Word (Word8)
+import Data.Tree (Tree(..), levels)
+import Text.ParserCombinators.Parsec (runParser)
+
+import qualified Data.ByteString as B
 
 -- TODO:
 -- * support parsing from ByteString, then take the "unpack" out of "parse" below

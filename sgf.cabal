@@ -27,7 +27,10 @@ library
     exposed-modules:    Data.SGF,
                         Data.SGF.Parse,
                         Data.SGF.Types
-    build-depends:      sgf-internal
+    build-depends:      sgf-internal,
+                        bytestring >= 0.12.2 && < 0.13,
+                        containers >= 0.6.7 && < 0.9,
+                        parsec >= 3.1.16 && < 3.2
     hs-source-dirs:     lib/
 
 library sgf-internal
@@ -37,8 +40,7 @@ library sgf-internal
                         Data.SGF.Types.Internal,
                         Data.SGF.Parse.Encodings,
                         Data.SGF.Parse.Raw,
-                        Data.SGF.Parse.Util,
-                        Data.SGF.Reexports
+                        Data.SGF.Parse.Util
     build-depends:      bytestring >= 0.12.2 && < 0.13,
                         containers >= 0.6.7 && < 0.9,
                         encoding >= 0.8.9 && < 0.11,
